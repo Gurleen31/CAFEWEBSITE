@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav
+        {
+           background-color: #945c44;
+           width:100%;
+           height:90px;
+           
+        }
+        img{
+            position: absolute;
+            height:60px;
+            width:150px;
+            margin-top: 15px;
+            margin-left: 20px;;
+        }
+        ul
+        {
+            
+            list-style: none;
+            display:inline-flex;
+            justify-content: flex-end;
+            float:right;
+        }
+        li{
+            display:inline-block;
+            margin-right:20px;
+            margin-top:20px;
+        }
+        .list
+        {  
+            display:inline-flex;
+            justify-content: center;
+        }
+        .list a
+        {
+            text-decoration:double;
+            color:gainsboro;
+        }
+        .list a:hover {
+            color:black;  
+        }
+        .list button
+        {
+           background-color: gainsboro;
+           border-radius: 12px;
+           font-family: serif;
+
+        }
+        body
+        {
+        background-color: gainsboro;
+        height: 100%;
+        width:100%;
+        
+         z-index: -1;
+        }
+        footer
+        {
+
+          background-color: #945c44;
+          height:100%;
+        }
+        .foot{
+            padding-top: 1%;
+            padding-bottom: 1%;
+            text-align: center;
+        }
+        hr
+        {
+            margin-bottom: 3px;
+          border:3px solid black;
+        }
+        .food
+        {    
+            padding-left: 2px;
+            font-weight: bold;
+            border:0;
+            color:black;
+            background-color: gainsboro;
+            padding-top:auto;
+            text-align: center;
+        }
+        .fitems{
+            padding-left: 2px;
+            font-weight: bold;
+            border:0;
+            color:black;
+            background-color: gainsboro;
+            padding-top: 2px;
+            text-align: center;
+        }
+        .retails{
+            padding-left: 2px;
+            font-weight: bold;
+            border:0;
+            color:black;
+            background-color: gainsboro;
+            padding-top: 2px;
+            text-align: center;
+        }
+        .search button
+        {
+            background-color: gainsboro;
+            border-radius: 12px;
+            float: right;
+            justify-content: flex-end;
+        }
+        .search input[type=text]
+        {
+            background-color: gainsboro;
+            border-radius: 12px;
+            float: right;
+            font-size: medium;
+        }
+        h1
+        {
+          padding-left:50px;
+        }
+        .main1
+        {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .food1
+        {
+            margin-left:100px;
+            margin-top: 10px;
+            display:grid;
+            border:1px black dotted;
+            box-shadow: 1px 1px 1px 1px rgb(78, 74, 74);
+            border-radius: 16px;
+            height:150px;
+            width:500px
+            
+        }
+        .food1 img{
+            height: 100px;
+            width:150px;
+            border:0;
+            margin-top:10px;
+            border-radius: 13px;
+            margin-left:340px;
+        }
+        .food1 p{
+            padding-left: 18px;
+            font-size: large;
+            font-style: italic;
+        }
+        .food1 button{
+            background-color: black;
+            color:white;
+            border:0;
+            border-radius: 12px;
+            align-items: center;
+            margin:7px;
+        }
+        .food2
+        {
+            
+            display:grid ;
+            margin-right:100px;
+            margin-top: 10px;
+            border:1px black dotted;
+            box-shadow: 1px 1px 1px 1px rgb(78, 74, 74);
+            border-radius: 16px;
+            height:150px;
+            width:500px
+            
+        }
+        .food2 img{
+            height: 100px;
+            width:150px;
+            border:0;
+            margin-top:10px;
+            border-radius: 13px;
+            margin-left:340px;
+        }
+        .food2 p{
+            padding-left: 18px;
+            font-size: large;
+            font-style: italic;
+        }
+        .food2 button{
+            background-color: black;
+            color:white;
+            border:0;
+            border-radius: 12px;
+            align-items: center;
+            margin:7px;
+        }
+        .food3
+        {
+            margin-left:100px;
+            margin-top: 10px;
+            display:grid;
+            border:1px black dotted;
+            box-shadow: 1px 1px 1px 1px rgb(78, 74, 74);
+            border-radius: 16px;
+            height:150px;
+            width:500px
+            
+        }
+        .food3 img{
+            height: 100px;
+            width:150px;
+            border:0;
+            margin-top:10px;
+            border-radius: 13px;
+            margin-left:340px;
+        }
+        .food3 p{
+            padding-left: 18px;
+            font-size: large;
+            font-style: italic;
+        }
+        .food3 button{
+            background-color: black;
+            color:white;
+            border:0;
+            border-radius: 12px;
+            align-items: center;
+            margin:7px;
+        }
+        .food4
+        {
+            
+            display:grid ;
+            margin-right:100px;
+            margin-top: 10px;
+            border:1px black dotted;
+            box-shadow: 1px 1px 1px 1px rgb(78, 74, 74);
+            border-radius: 16px;
+            height:150px;
+            width:500px
+            
+        }
+        .food4 img{
+            height: 100px;
+            width:150px;
+            border:0;
+            margin-top:10px;
+            border-radius: 13px;
+            margin-left:340px;
+        }
+        .food4 p{
+            padding-left: 18px;
+            font-size: large;
+            font-style: italic;
+        }
+        .food4 button{
+            background-color: black;
+            color:white;
+            border:0;
+            border-radius: 12px;
+            align-items: center;
+            margin:7px;
+        }
+        .food5
+        {
+            margin-left:100px;
+            margin-top: 10px;
+            display:grid;
+            border:1px black dotted;
+            box-shadow: 1px 1px 1px 1px rgb(78, 74, 74);
+            border-radius: 16px;
+            height:150px;
+            width:500px
+            
+        }
+        .food5 img{
+            height: 100px;
+            width:150px;
+            border:0;
+            margin-top:10px;
+            border-radius: 13px;
+            margin-left:340px;
+        }
+        .food5 p{
+            padding-left: 18px;
+            font-size: large;
+            font-style: italic;
+        }
+        .food5 button{
+            background-color: black;
+            color:white;
+            border:0;
+            border-radius: 12px;
+            align-items: center;
+            margin:7px;
+        }
+        .food6
+        {
+            
+            display:grid ;
+            margin-right:100px;
+            margin-top: 10px;
+            border:1px black dotted;
+            box-shadow: 1px 1px 1px 1px rgb(78, 74, 74);
+            border-radius: 16px;
+            height:150px;
+            width:500px
+            
+        }
+        .food6 img{
+            height: 100px;
+            width:150px;
+            border:0;
+            margin-top:10px;
+            border-radius: 13px;
+            margin-left:340px;
+        }
+        .food6 p{
+            padding-left: 18px;
+            font-size: large;
+            font-style: italic;
+        }
+        .food6 button{
+            background-color: black;
+            color:white;
+            border:0;
+            border-radius: 12px;
+            align-items: center;
+            margin:7px;
+        }
+        .main2
+        {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .food7
+        {
+            margin-left:100px;
+            margin-top: 10px;
+            display:grid;
+            border:1px black dotted;
+            box-shadow: 1px 1px 1px 1px rgb(78, 74, 74);
+            border-radius: 16px;
+            height:150px;
+            width:500px
+            
+        }
+        .food7 img{
+            height: 100px;
+            width:150px;
+            border:0;
+            margin-top:10px;
+            border-radius: 13px;
+            margin-left:340px;
+        }
+        .food7 p{
+            padding-left: 18px;
+            font-size: large;
+            font-style: italic;
+        }
+        .food7 button{
+            background-color: black;
+            color:white;
+            border:0;
+            border-radius: 12px;
+            align-items: center;
+            margin:7px;}
+        .food8
+        {
+            
+            display:grid ;
+            margin-right:100px;
+            margin-top: 10px;
+            border:1px black dotted;
+            box-shadow: 1px 1px 1px 1px rgb(78, 74, 74);
+            border-radius: 16px;
+            height:150px;
+            width:500px
+            
+        }
+        .food8 img{
+            height: 100px;
+            width:150px;
+            border:0;
+            margin-top:10px;
+            border-radius: 13px;
+            margin-left:340px;
+        }
+        .food8 p{
+            padding-left: 18px;
+            font-size: large;
+            font-style: italic;
+        }
+        .food8 button{
+            background-color: black;
+            color:white;
+            border:0;
+            border-radius: 12px;
+            align-items: center;
+            margin:7px;
+        }
+        .food9
+        {
+            margin-left:100px;
+            margin-top: 10px;
+            display:grid;
+            border:1px black dotted;
+            box-shadow: 1px 1px 1px 1px rgb(78, 74, 74);
+            border-radius: 16px;
+            height:150px;
+            width:500px
+            
+        }
+        .food9 img{
+            height: 100px;
+            width:150px;
+            border:0;
+            margin-top:10px;
+            border-radius: 13px;
+            margin-left:340px;
+        }
+        .food9 p{
+            padding-left: 18px;
+            font-size: large;
+            font-style: italic;
+        }
+        .food9 button{
+            background-color: black;
+            color:white;
+            border:0;
+            border-radius: 12px;
+            align-items: center;
+            margin:7px;
+        }
+        .food10
+        {
+            
+            display:grid ;
+            margin-right:100px;
+            margin-top: 10px;
+            border:1px black dotted;
+            box-shadow: 1px 1px 1px 1px rgb(78, 74, 74);
+            border-radius: 16px;
+            height:150px;
+            width:500px
+            
+        }
+        .food10 img{
+            height: 100px;
+            width:150px;
+            border:0;
+            margin-top:10px;
+            border-radius: 13px;
+            margin-left:340px;
+        }
+        .food10 p{
+            padding-left: 18px;
+            font-size: large;
+            font-style: italic;
+        }
+        .food10 button{
+            background-color: black;
+            color:white;
+            border:0;
+            border-radius: 12px;
+            align-items: center;
+            margin:7px;
+        }
+    </style>
+</head>
+<header>
+    <nav>
+        <!-- <div class="navi"> -->
+        <img src="logoo.png">
+        <ul>
+            <li class="list"><a href="index.html">Home</a></li>
+            <li class="list"><a href="about.html">About Us</a></li>
+            <li class="list"><a href="order.html">Shop</a></li>
+            <li class="list"><a href="last.html"><button>CONTACT US</button></a></li>
+        </ul>
+    <!-- </div> -->
+    </nav>
+</header>
+<body>
+    <div class="items">
+        <hr>
+        <select name="BEVERAGES" class="food">
+            <option value="BEVERAGES">BEVERAGES</option>
+            <option value="COFFEE ">COFFEE(9)</option>
+            <option value="TEA">TEA(7)</option>
+            <option value="SOFTD ">SOFTDRINKS(12)</option>
+            <option value="JUICE">JUICES AND LEMONADES(6)</option>
+            <option value="SHAKES ">SHAKES(4)</option>
+            <option value="MOCKTAILS ">MOCKTAILS(3)</option>
+        </select>
+        <select name="FOOD" class="fitems">
+            <option value="FOODS">FOODS</option>
+            <option value="BAKED ">BAKED GOODS(8)</option>
+            <option value="BREAK">BREAKFAST</option>
+            <option value="SALAD">SALADS(6)</option>
+            <option value="BOWLS">GRAIN BOWLS(8)</option>
+        </select>
+        <select name="retails" class="retails">
+            <option value="RETAILS">RETIALS</option>
+            <option value="tea ">RETAIL TEA(8)</option>
+            <option value="food">RETAIL FOOD</option>
+            <option value="coffee">RETAIL COFFEE</option>
+        </select>
+        <div class="search">
+            <input type="text" placeholder="SEARCH.." name="search"><button>search</button>
+        </div>
+        <br>
+        <hr>
+    </div>
+<h1>BEVERAGES</h1>    
+<div class="main1">
+<div class="food1">
+     <img src="food1.jpg">
+     <p>LATTE 
+        <br>
+        <br>
+        PRICE:$5.00</p>
+    <button>ADD TO CART</button>    
+</div>
+<div class="food2">
+    <img src="food2.jpeg">
+    <p>AMERICANO 
+       <br>
+       <br>
+       PRICE:$4.50</p>
+   <button>ADD TO CART</button>    
+</div>
+<div class="food3">
+    <img src="food3.jpg">
+    <p>CAPPUCCINO
+       <br>
+       <br>
+       PRICE:$4.25</p>
+   <button>ADD TO CART</button>    
+</div>
+<div class="food4">
+    <img src="food4.jpg">
+    <p>HOT CHOCOLATE
+       <br>
+       <br>
+       PRICE:$4.25</p>
+   <button>ADD TO CART</button>    
+</div>
+<div class="food5">
+    <img src="food5.jpg">
+    <p>HOT TEA
+       <br>
+       <br>
+       PRICE:$4.75</p>
+   <button>ADD TO CART</button>    
+</div>
+<div class="food6">
+    <img src="food6.jpg">
+    <p>ICE TEA
+       <br>
+       <br>
+       PRICE:$4.25</p>
+   <button>ADD TO CART</button>    
+</div>
+</div>
+<BR>
+<h1>FOODS</h1>
+<div class="main2">
+    <div class="food7">
+    <img src="food7.jpg">
+    <p>MUFFINS
+        <br>
+        <br>
+        PRICE:$4.75</p>
+    <button>ADD TO CART</button> 
+    </div>
+    <div class="food8">
+        <img src="food8.jpg">
+        <p>AVOCADO TOAST
+            <br>
+            <br>   
+            PRICE:$12.00</p>
+        <button>ADD TO CART</button> 
+        </div>
+    <div class="food9">
+        <img src="food9.jpg">
+        <p>EGG AND CHEESE
+            <br>
+            <br>   
+            PRICE:$9.00</p>
+        <button>ADD TO CART</button> 
+    </div> 
+<div class="food10">
+    <img src="FOOD10.jpg">
+    <p>BROCCOLI SALAD
+        <br>
+        <br>   
+        PRICE:$17.50</p>
+    <button>ADD TO CART</button> 
+</div> 
+     
+</div>
+</body>
+<footer>
+<p class="foot">
+THE COFFEE MOMENT <br>
+ 
+2022 © The Coffee Moment. All rights reserved.
+    </p>
+</footer>
+</html>
